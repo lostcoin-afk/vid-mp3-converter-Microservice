@@ -1,0 +1,1 @@
+# this package is going to be used for the authentication service in the auth directory hence the name auth_svc

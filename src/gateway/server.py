@@ -29,10 +29,11 @@ def upload():
 
     access = json.loads(access)
 
-    if access["admin"]:
+    if access["admin"]: 
         if len(request.files) > 1 or len(request.files) < 1:
             return "exactly 1 file required", 400
-        
+
+#This is the util.upload is the real implementation of the RabbitMQ message broker.        
         for _, f in request.files.items():
             err = util.upload(f,fs, channel, access)
 

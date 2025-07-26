@@ -19,10 +19,10 @@ spec:
         app: gateway
     spec:
       containers:
-        -name: gateway
-        image: whoknows619/gateway:gatewayLatest
-        envFrom:
-          -configMapRef:
-            name: gateway-configmap
-          -secretRef:
-            name: gateway-secret
+        - name: gateway
+          image: whoknows619/gateway:gatewayLatest
+          envFrom:
+            - configMapRef:
+                name: gateway-configmap
+            - secretRef:
+                name: gateway-secret
